@@ -54,7 +54,7 @@ class InteractiveRecord
   end
   
   def self.find_by(table_name_for_insert)
-    sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
+    sql = "SELECT * FROM #{self.table_name_for_insert} WHERE ? = ?"
     DB[:conn].execute(sql)
   end
   
